@@ -349,3 +349,4 @@ for line in text :
                     PC+=4
 output.close()
 
+#python3 src\main.py --no-sim --windows
