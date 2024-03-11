@@ -1,3 +1,5 @@
+import sys
+
 R_op_code= {"add":["0110011","000"],
             "sub":["0110011","000"],
             "sll":["0110011","001"],
@@ -299,11 +301,14 @@ def I_instruction(line, allLines):
     output+= I_op_code[inst_name][1]+ registers[rd]+I_op_code[inst_name][0]
     return output
 
-input=open("Input.txt",'r')
+inputFile=sys.argv[1]
+outputFile=sys.argv[2]
+file=open(inputFile,'r')
 
-text=input.read()
-input.close()
-output= open("Output.txt", 'w')
+text=file.read()
+file.close()
+output=open(outputFile,'w')
+
 flag=False
 text= text.split('\n')
 for line in text :
