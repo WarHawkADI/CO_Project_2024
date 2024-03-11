@@ -26,7 +26,6 @@ A register can be zero, ra, sp, gp, etc. as per their ABI Name.
 A immediate within bounds as per specified instruction.
 A label thet will be utilized at jump and branch type instructions.
 
-8
 
 2. If an instruction is labeled. Then, the label must be at the beginning of the instruction. The
 label is followed by a colon with no space in between the label and the colon. The branch
