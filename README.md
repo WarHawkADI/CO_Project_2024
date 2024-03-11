@@ -8,7 +8,7 @@ RISC-V, an open-source ISA, is increasingly used for open-source hardware develo
 Assembler
 
 We programmed an assembler for the aforementioned ISA and assembly. The assembler read the
-assembly program as an input text file (stdin) and must generate the binary (if there are no errors)
+assembly program as an input text file (stdin) and generate the binary (if there are no errors)
 as an output text file (stdout). If there are errors, the assembler  generate the error notifications
 along with the line number on which the error was encountered as an output text file (stdout). In
 case of multiple errors, the assembler may print an error.
