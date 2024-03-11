@@ -1,2 +1,1 @@
-bltu a1,a2,32
-beq zero,zero,0
+
