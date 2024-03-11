@@ -33,9 +33,7 @@ instructions in the assembly code will utilize the labels to jump to the specifi
 converting assembly into binary, the label will be converted into an immediate by subtracting
 
 the absolute instruction address (pointed out by the label) from the current instruction ad-
-dress (Program Counter). The arithmetic operation is signed as the jump can be upward or
-
-downward. And, the converted immediate is signed (2’s complement representation) and is of
+dress (Program Counter). The arithmetic operation is signed as the jump can be upward or downward. And, the converted immediate is signed (2’s complement representation) and is of
 12 bits.
 All the programs should terminate with the Virtual Halt instruction (beq zero,zero,0x00000000).
 Note that the immediate is signed. Here (0x00000000) represents (0) of decimal. This instruction
