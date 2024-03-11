@@ -44,6 +44,6 @@ The assembler provides informative error messages for common issues encountered 
 
 ## License
 
-This RISC-V Assembler is licensed under the MIT License, permitting users to freely use, modify, and distribute the code. For detailed information, refer to the [LICENSE](LICENSE) file. If you encounter any issues or have suggestions for improvement, please feel free to open an [issue](https://github.com/your-username/riscv-assembler/issues).
+This RISC-V Assembler is licensed under the MIT License, permitting users to freely use, modify, and distribute the code. For detailed information, refer to the [LICENSE](LICENSE) file.
 
 
