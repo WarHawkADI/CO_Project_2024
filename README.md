@@ -42,8 +42,3 @@ The assembler provides informative error messages for common issues encountered 
 3. **Illegal Immediate Value (Error Code: 3):** An immediate value exceeds the allowable range for the given instruction.
 4. **Virtual Halt Is Missing (Error Code: 4):** The assembler detects that a virtual halt instruction is missing, ensuring proper program termination.
 
-## License
-
-This RISC-V Assembler is licensed under the MIT License, permitting users to freely use, modify, and distribute the code. For detailed information, refer to the [LICENSE](LICENSE) file.
-
-
