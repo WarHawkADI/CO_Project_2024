@@ -1,15 +1,30 @@
 import sys
-R_op_code= {"add":"0110011","sub":"0110011","sll":"0110011","slt":"0110011",
-"sltu":"0110011","xor":"0110011","srl":"0110011","or":"0110011","and":"0110011"}
+R_op_code= {"add":"0110011",
+            "sub":"0110011",
+            "sll":"0110011",
+            "slt":"0110011",
+            "sltu":"0110011",
+            "xor":"0110011",
+            "srl":"0110011",
+            "or":"0110011",
+            "and":"0110011"}
 
-I_op_code= {"lw":"0000011", "addi":"0010011", "sltiu":"0010011", "jalr":"1100111"}
+I_op_code= {"lw":"0000011", 
+            "addi":"0010011", 
+            "sltiu":"0010011", 
+            "jalr":"1100111"}
 
 S_op_code= {"sw":"0100011"}
 
-B_op_code= {"beq":"1100011", "bne":"1100011","blt":"1100011",
-"bge":"1100011", "bltu":"1100011", "bgeu":"1100011"}
+B_op_code= {"beq":"1100011", 
+            "bne":"1100011",
+            "blt":"1100011",
+            "bge":"1100011", 
+            "bltu":"1100011", 
+            "bgeu":"1100011"}
 
-U_op_code= {"lui":"0110111", "auipc": '0010111'}
+U_op_code= {"lui":"0110111", 
+            "auipc": '0010111'}
 
 J_op_code= {"jal":"1101111"}
 
@@ -20,7 +35,7 @@ registers= {"zero":"00000", "ra":"00001","sp":"00010","gp":"00011","tp":"00100",
  "s8":"11000" ,"s9": "11001", "s10":"11010", "s11": "11011" ,
  "t3":"11100", "t4":"11101", "t5":"11110", "t6":"11111"}  
 
-
+#functions defining
 
 def binary_to_decimal(binary_str, bits, is_twos_complement=True):
     val = int(binary_str, 2)
@@ -47,6 +62,10 @@ registers={"00000":0,"00001":0,"00010":256,"00011":0,"00100":0,"00101":0,"00110"
            "01100":0, "01101":0,"01110":0, "01111":0,
             "10000":0,"10001":0, "10010":0,"10011":0,"10100":0,"10101":0,"10110":0,"10111":0,
             "11000":0, "11001":0,"11010":0, "11011":0 ,"11100":0,"11101":0,"11110":0,"11111":0}  
+
+
+#input file related
+
 inputFile=sys.argv[1]
 outputFile= sys.argv[2]
 file=open(inputFile,'r')
@@ -56,8 +75,14 @@ text=text.split('\n')
 file.close()
 f1= open(outputFile,'w')
 
+#PC function
+
 PC=0
 count1=0
+
+#else if stuff
+
+
 while PC<=128:
     count1+=1
     if count1>=49:
@@ -220,8 +245,13 @@ while PC<=128:
     f1.write(output)
     
 n=""
+
+#i format
+
 for i in (memory.keys()):
     mem_hex= format(i, f"0{8}X")
     n+=(f"0x{mem_hex.lower()}:0b{decimal_to_binary(memory[i],32)}\n")
 f1.write(n)
 f1.close()
+
+
